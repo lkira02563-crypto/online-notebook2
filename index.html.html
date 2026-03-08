@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+  <title>online notebook</title>
+  <style>
+.title{
+
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-weight: 200;
+font-display: block;
+text-align: center;
+
+font-size:28px;
+margin-top:40px;
+}
+.diary {
+  margin: 20px auto;
+  width: 80%;
+  text-align: center;
+}
+
+.diary textarea {
+  width: 90%;
+  font-size: 16px;
+  padding: 10px;
+}
+
+
+
+.button{
+display: block;
+margin: 30px auto;
+width:200px;
+height:50px;
+border-radius:8px;
+border:none;
+font-size:16px;
+}
+
+.button:hover{
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  transition: 0.1s;
+}
+.pic{
+display: block;
+margin: auto;
+}
+body{
+  background-color: lightblue;
+}
+.step{
+  display: none;
+}
+  </style>
+</head>
+<body>
+
+  <p class="title">
+    <strong>welcom to your online notebook.</strong>
+ 
+  </p>
+  <img class="pic" src="download.jpg">
+
+
+  <h1>Online Notebook</h1>
+
+<button class="button" onclick="startAccountCreation()">Create Account</button>
+
+
+
+<div id="step1" class="step">
+  <input id="name" placeholder="Full Name">
+  <input id="age" placeholder="Age">
+  <input id="country" placeholder="Country">
+  <input id="pet" placeholder="Pet name">
+  <input id="movie" placeholder="Favorite movie">
+  <input id="password" type="password" placeholder="Choose password">
+  <button onclick="createAccount()">Submit Account</button>
+</div>
+
+<div id="step2" class="step">
+  <input id="checkName" placeholder="What is your name?">
+  <input id="checkCountry" placeholder="Country you were born in">
+  <input id="checkMovie" placeholder="Favorite movie">
+  <button onclick="verifyUser()">Verify</button>
+</div>
+
+<div id="step3" class="step">
+  <input id="fullPassword" type="password" placeholder="Enter full password">
+  <button onclick="login()">Login</button>
+</div>
+
+<div id="diary" class="step">
+  <h2>Your Notebook</h2>
+  <textarea id="diaryInput" rows="10" cols="50" placeholder="Write your thoughts here..."></textarea>
+  <br>
+  <button onclick="saveDiary()">Save Entry</button>
+  <button onclick="clearDiary()">Clear All</button>
+  <h3>Previous Entries:</h3>
+  <div id="entries"></div>
+  <button onclick="logout()">Log Out</button>
+</div>
+<div id="start">
+  <button onclick="startAccountCreation()">Create Account</button>
+   <button onclick="guestLogin()">Continue as Guest</button>
+
+</div>
+ <script src="script.js"></script>
+ 
+ 
+  
+</body>
+</html>
